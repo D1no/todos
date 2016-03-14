@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthPage from './../_auth.jsx';
+import { _auth } from './../_auth.jsx';
 import { Link } from 'react-router';
 import { Accounts } from 'meteor/accounts-base';
 
@@ -79,7 +79,7 @@ export default class JoinPage extends React.Component {
 
     const link = <Link to="/signin" className="link-auth-alt">Have an account? Sign in</Link>;
 
-    return <AuthPage content={content} link={link}/>;
+    return <_auth content={content} link={link}/>;
   }
 }
 

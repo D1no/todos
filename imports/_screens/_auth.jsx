@@ -2,7 +2,7 @@ import React from 'react';
 import MobileMenu from '../#components/MobileMenu.jsx';
 
 // a common layout wrapper for auth pages
-const AuthPage = ({ content, link }) => (
+const _auth = ({ content, link }) => (
   <div className="page auth">
     <nav>
       <MobileMenu/>
@@ -14,9 +14,9 @@ const AuthPage = ({ content, link }) => (
   </div>
 );
 
-AuthPage.propTypes = {
+_auth.propTypes = {
   content: React.PropTypes.element,
   link: React.PropTypes.element,
 };
 
-export default AuthPage;
+export default _auth;

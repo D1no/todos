@@ -2,7 +2,7 @@ import React from 'react';
 import MobileMenu from '../#components/MobileMenu.jsx';
 import Message from '../#components/Message.jsx';
 
-const NotFoundPage = () => (
+const _notFound = () => (
   <div className="page not-found">
     <nav>
       <MobileMenu/>
@@ -13,4 +13,4 @@ const NotFoundPage = () => (
   </div>
 );
 
-export default NotFoundPage;
+export default _notFound;

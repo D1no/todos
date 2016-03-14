@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import React from 'react';
-import AuthPage from './../_auth.jsx';
+import _auth from './../_auth.jsx';
 import { Link } from 'react-router';
 
 export default class SignInPage extends React.Component {
@@ -68,7 +68,7 @@ export default class SignInPage extends React.Component {
 
     const link = <Link to="/join" className="link-auth-alt">Need an account? Join Now.</Link>;
 
-    return <AuthPage content={content} link={link}/>;
+    return <_auth content={content} link={link}/>;
   }
 }
 
