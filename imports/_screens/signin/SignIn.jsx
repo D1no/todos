@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import React from 'react';
-import AuthPage from './AuthPage.jsx';
+import AuthPage from './../_auth.jsx';
 import { Link } from 'react-router';
 
 export default class SignInPage extends React.Component {

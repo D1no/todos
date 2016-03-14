@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthPage from './AuthPage.jsx';
+import AuthPage from './../_auth.jsx';
 import { Link } from 'react-router';
 import { Accounts } from 'meteor/accounts-base';
 

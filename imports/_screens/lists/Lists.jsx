@@ -1,8 +1,8 @@
 import React from 'react';
-import ListHeader from '../#components/ListHeader.jsx';
-import TodoItem from '../#components/TodoItem.jsx';
-import NotFoundPage from './NotFoundPage.jsx';
-import Message from '../#components/Message.jsx';
+import ListHeader from '../../#components/ListHeader.jsx';
+import TodoItem from '../../#components/TodoItem.jsx';
+import NotFoundPage from './../_notFound.jsx';
+import Message from '../../#components/Message.jsx';
 
 export default class ListPage extends React.Component {
   constructor(props) {

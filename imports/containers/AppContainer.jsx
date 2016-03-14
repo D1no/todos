@@ -3,7 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import { Session } from 'meteor/session';
 import { Lists } from '../api/lists/lists.js';
 import { createContainer } from 'meteor/react-meteor-data';
-import App from '../layouts/App.jsx';
+import App from '../_screens/Index.jsx';
 
 export default createContainer(() => {
   const publicHandle = Meteor.subscribe('lists.public');
