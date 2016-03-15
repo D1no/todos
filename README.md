@@ -1,5 +1,5 @@
 ### File Convention Fork: A screen based component schema
-Please look into the `imports/` directory. The relevant directory in a Meteor 1.3 app (new module-feature).
+Please look into the [`imports/` directory](https://github.com/D1no/todos/tree/react-screen-component/imports). The relevant directory in a Meteor 1.3 app (new module-feature).
 
 This is a fork of the official Meteor 1.3 todos-react example. It has the same functionality, but the folder & file structure has been adapted. This repo is generally more flat in its folder hierarchy illustrates a **screen based**  structure in which react components are split into
 * Containers & Components that form a (part of) screen into the `imports/_screens` folder and
