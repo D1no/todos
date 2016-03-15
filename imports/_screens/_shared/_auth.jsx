@@ -1,11 +1,11 @@
 import React from 'react';
-import MobileMenu from '../#components/MobileMenu.jsx';
+import mobileMenuToggle from '../../#components/mobileMenuToggle';
 
 // a common layout wrapper for auth pages
 const _auth = ({ content, link }) => (
   <div className="page auth">
     <nav>
-      <MobileMenu/>
+      <mobileMenuToggle/>
     </nav>
     <div className="content-scrollable">
       {content}

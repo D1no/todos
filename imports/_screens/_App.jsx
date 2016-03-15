@@ -3,10 +3,10 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { Meteor } from 'meteor/meteor';
 import { Session } from 'meteor/session'; // XXX: SESSION
 import { Lists } from '../api/lists/lists.js';
-import UserMenu from '../#components/UserMenu.jsx';
-import ListList from '../#components/ListList.jsx';
-import ConnectionNotification from '../#components/ConnectionNotification.jsx';
-import Loading from '../#components/Loading.jsx';
+import _Menu from './_Menu.jsx';
+import _ListList from './_ListList.jsx';
+import connectionNotification from '../#components/connectionNotification.jsx';
+import loading from '../#components/loading.jsx';
 
 const CONNECTION_ISSUE_TIMEOUT = 5000;
 
@@ -76,11 +76,11 @@ export default class App extends React.Component {
     return (
       <div id="container" className={menuOpen ? 'menu-open' : ''}>
         <section id="menu">
-          <UserMenu user={user} logout={this.logout}/>
-          <ListList lists={lists}/>
+          <_Menu user={user} logout={this.logout}/>
+          <_ListList lists={lists}/>
         </section>
         {showConnectionIssue && !connected
-          ? <ConnectionNotification/>
+          ? <connectionNotification/>
           : null}
         <div className="content-overlay" onClick={closeMenu}></div>
         <div id="content-container">
@@ -90,7 +90,7 @@ export default class App extends React.Component {
             transitionLeaveTimeout={200}
           >
             {loading
-              ? <Loading key="loading"/>
+              ? <loading key="loading"/>
               : clonedChildren}
           </ReactCSSTransitionGroup>
         </div>

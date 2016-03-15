@@ -1,14 +1,14 @@
 import React from 'react';
-import MobileMenu from '../#components/MobileMenu.jsx';
-import Message from '../#components/Message.jsx';
+import mobileMenueToggle from '../../#components/mobileMenuToggle';
+import message from '../../#components/message';
 
 const _notFound = () => (
   <div className="page not-found">
     <nav>
-      <MobileMenu/>
+      <mobileMenueToggle/>
     </nav>
     <div className="content-scrollable">
-      <Message title="Page not found"/>
+      <message title="Page not found"/>
     </div>
   </div>
 );

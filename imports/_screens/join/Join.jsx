@@ -1,5 +1,5 @@
 import React from 'react';
-import { _auth } from './../_auth.jsx';
+import { _auth } from '../_shared/_auth.jsx';
 import { Link } from 'react-router';
 import { Accounts } from 'meteor/accounts-base';
 

@@ -1,17 +1,17 @@
 import React from 'react';
-import MobileMenu from './MobileMenu.jsx';
-import { displayError } from '../helpers/errors.js';
+import mobileMenuToggle from './../../#components/mobileMenuToggle.jsx';
+import { displayError } from '../../lib/errors.js';
 
 import {
   updateName,
   makePublic,
   makePrivate,
   remove,
-} from '../api/lists/methods.js';
+} from '../../api/lists/methods.js';
 
 import {
   insert,
-} from '../api/todos/methods.js';
+} from '../../api/todos/methods.js';
 
 export default class ListHeader extends React.Component {
   constructor(props) {
@@ -113,7 +113,7 @@ export default class ListHeader extends React.Component {
     const { list } = this.props;
     return (
       <div>
-        <MobileMenu/>
+        <mobileMenuToggle/>
         <h1 className="title-page" onClick={this.editList}>
           <span className="title-wrapper">{list.name}</span>
           <span className="count-list">{list.incompleteCount}</span>

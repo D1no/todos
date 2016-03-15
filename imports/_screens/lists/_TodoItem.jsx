@@ -1,13 +1,13 @@
 import React from 'react';
 import { _ } from 'meteor/underscore';
 import classnames from 'classnames';
-import { displayError } from '../helpers/errors.js';
+import { displayError } from '../../lib/errors.js';
 
 import {
   setCheckedStatus,
   updateText,
   remove,
-} from '../api/todos/methods.js';
+} from '../../api/todos/methods.js';
 
 export default class TodoItem extends React.Component {
   constructor(props) {

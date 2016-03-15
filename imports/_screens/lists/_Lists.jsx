@@ -1,8 +1,8 @@
 import React from 'react';
-import ListHeader from '../../#components/ListHeader.jsx';
-import TodoItem from '../../#components/TodoItem.jsx';
-import NotFoundPage from './../_notFound.jsx';
-import Message from '../../#components/Message.jsx';
+import _Header from './_Header';
+import _TodoItem from './_TodoItem.jsx';
+import _notFound from '../_shared/_notFound.jsx';
+import message from '../../#components/message';
 
 export default class ListPage extends React.Component {
   constructor(props) {
@@ -24,20 +24,20 @@ export default class ListPage extends React.Component {
     const { editingTodo } = this.state;
 
     if (!listExists) {
-      return <NotFoundPage/>;
+      return <_notFound/>;
     }
 
     let Todos;
     if (!todos || !todos.length) {
       Todos = (
-        <Message
+        <message
           title="No tasks here"
           subtitle="Add new tasks using the field above"
         />
       );
     } else {
       Todos = todos.map(todo => (
-        <TodoItem
+        <_TodoItem
           todo={todo}
           key={todo._id}
           editing={todo._id === editingTodo}
@@ -48,9 +48,9 @@ export default class ListPage extends React.Component {
 
     return (
       <div className="page lists-show">
-        <ListHeader list={list}/>
+        <_Header list={list}/>
         <div className="content-scrollable list-items">
-          {loading ? <Message title="Loading tasks..."/> : Todos}
+          {loading ? <message title="Loading tasks..."/> : Todos}
         </div>
       </div>
     );

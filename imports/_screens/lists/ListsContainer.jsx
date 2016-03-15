@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
-import { Lists } from '../api/lists/lists.js';
+import { Lists } from '../../api/lists/lists.js';
 import { createContainer } from 'meteor/react-meteor-data';
-import ListPage from '../_screens/lists/Lists.jsx';
+import _Lists from './_Lists.jsx';
 
 export default createContainer(({ params: { id } }) => {
   const todosHandle = Meteor.subscribe('todos.inList', id);
@@ -14,4 +14,4 @@ export default createContainer(({ params: { id } }) => {
     listExists,
     todos: listExists ? list.todos().fetch() : [],
   };
-}, ListPage);
+}, _Lists);
